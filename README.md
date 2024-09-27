@@ -45,7 +45,13 @@ This example hashes the input string `"Hello, World!"` and maps the resulting ha
 - When you run the program, the output will be an element of the group represented by an integer:
 >```
 >Hashed to additive group: 194190417574819553442057220677104150407
-
+## Functionality
+- `hash_to_group(input: &[u8], prime: &BigUint) -> BigUint`
+   - **input:** A byte array that is hashed using SHA-256.
+   - **prime:** A large prime number to define the additive group.
+   - Returns the element of the additive group resulting from the hash modulo operation.
+- `main()`
+   - Demonstrates the use of the `hash_to_group` function by hashing the input `"Hello, World!"` and printing the result.
 ## Acknowledgments
 - Rust
 ### Clone the repository or copy the source code into a Rust project.
